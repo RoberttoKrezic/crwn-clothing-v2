@@ -10,7 +10,6 @@
   top: 90px;
   right: 40px;
   z-index: 5;
-  overflow: hidden;
 
   .empty-message {
     font-size: 18px;
@@ -18,13 +17,13 @@
   }
 
   .cart-items {
-    height: 240px;
+    height: 260px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
   }
 
   button {
-    margin-top: auto;
+    margin-top: 3px;
   }
 }
