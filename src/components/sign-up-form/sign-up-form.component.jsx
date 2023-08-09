@@ -1,10 +1,6 @@
 import { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import { useDispatch } from "react-redux";
-import {
-  createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.utils";
 import { SignUpContainer } from "./sign-up-form.styles.jsx";
 import { signUpStart } from "../../store/user/user.action";
 import Button from "../button/button.component";
@@ -27,7 +23,7 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       alert("passwords do not match");
       return;
     }

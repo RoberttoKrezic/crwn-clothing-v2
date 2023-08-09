@@ -26,7 +26,7 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
   );
   // check if quantity is equal to 1, if it is remove it from cart
   if (existingCartItem.quantity === 1) {
-    return cartItems.filter((cartItem) => cartItem.id != cartItemToRemove.id);
+    return cartItems.filter((cartItem) => cartItem.id !== cartItemToRemove.id);
   }
   // return back cart items with matching quantity
   return cartItems.map((cartItem) =>
@@ -37,7 +37,7 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
 };
 
 const clearCartItem = (cartItems, cartItemToClear) =>
-  cartItems.filter((cartItem) => cartItem.id != cartItemToClear.id);
+  cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
 
 export const setIsCartOpen = (boolean) =>
   createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, boolean);

@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import CategoriesPreview from "../categories-preview/categories-preview.component";
 import Category from "../category/category.component";
 import "./shop.styles.scss";
-import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
 // import { fetchCategoriesAsync } from "../../store/categories/category.action"; THUNK
 import { fetchCategoriesStart } from "../../store/categories/category.action";
 
@@ -14,7 +13,7 @@ const Shop = () => {
 
   useEffect(() => {
     dispatch(fetchCategoriesStart());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>
